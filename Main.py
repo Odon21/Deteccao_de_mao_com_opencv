@@ -14,9 +14,7 @@ wCam, hCam = 460, 460
 cap = cv2.VideoCapture(0)
 cap.set(3, wCam)
 cap.set(4, hCam)
-
 PTime = 0
-
 # Definir cores e espessuras personalizadas
 landmark_color = (0, 0, 255)  # Verde para pontos (landmarks)
 connection_color = (0, 255, 0)  # Azul para conexões
@@ -75,9 +73,6 @@ while True:
                 if length <=50:
                     #volume.set_volume(valInt)
                     cv2.circle(img, (cx, cy), 15, (0, 255, 0), cv2.FILLED)
-                
-
-
     cTime = time.time()
     fps = 1 / (cTime - PTime)
     PTime = cTime
